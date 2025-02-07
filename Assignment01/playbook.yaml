@@ -1,0 +1,31 @@
+---
+- name: Nginx web server
+  hosts: my_hosts
+  vars: 
+    server_name: mynginx.local
+    html_location: /var/www/html
+    allowed_ips:
+      - 192.168.1.50
+      - 192.168.1.60
+      - 192.168.1.70
+  tasks:
+    - name: install nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: yes
+    - name: Place the Nginx configuration
+      ansible.builtin.template:
+        src: nginx.conf.j2
+        dest: /etc/nginx/sites-available/default
+        notify: Restart Nginx
+    - name: Start And Enable nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+  handler:
+    - name: Restart Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
