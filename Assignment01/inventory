@@ -1,6 +1,7 @@
 ansiblemain ansible_host=192.168.66.6
+web01 ansible_host=192.168.66.7
 [my_hosts]
-ansiblemain
+web01
 [my_hosts:vars]
 ansible_connect=ssh
 ansible_user=ansibleadmin

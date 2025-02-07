@@ -26,7 +26,7 @@
     - name: Check Nginx Configuration
       ansible.builtin.command:
         cmd: nginx -t
-        register: check_output
+      register: check_output
     - name: print check output
       ansible.builtin.debug:
         msg: "{{ check_output.stdout }}"
