@@ -18,7 +18,17 @@
       ansible.builtin.template:
         src: nginx.conf.j2
         dest: /etc/nginx/sites-available/default
-        notify: Restart Nginx
+        mode: '0644'
+        owner: root
+        group: root
+      notify: Restart Nginx
+    - name: Check Nginx Configuration
+      ansible.builtin.command:
+        cmd: nginx -t
+        register: check_output
+    - name: print check output
+      ansible.builtin.debug:
+        msg: "{{ check_output }}"
     - name: Start And Enable nginx
       ansible.builtin.service:
         name: nginx
