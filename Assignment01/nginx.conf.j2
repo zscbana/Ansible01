@@ -3,7 +3,7 @@ server {
     server_name {{ server_name }};
     
     location / {
-        root {{ /var/www/html }};
+        root {{ html_location }};
         index index.html index.htm;
  
         # Deny access by default
