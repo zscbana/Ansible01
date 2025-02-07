@@ -8,7 +8,7 @@ In this task, I created a new virtual machine using **Multipass**, configured it
 
 [![Ansible](https://img.shields.io/badge/Ansible-Intermediate-blue?style=flat-square&logo=ansible)](#)  
 [![Jinja2](https://img.shields.io/badge/Jinja2-Intermediate-blue?style=flat-square&logo=python)](#)  
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-Expert-orange?style=flat-square&logo=ubuntu)](#)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-Intermediate-orange?style=flat-square&logo=ubuntu)](#)
 
 ## ![Screenshot -1](./PlayBook.png) 
 
