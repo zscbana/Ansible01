@@ -28,13 +28,13 @@
         register: check_output
     - name: print check output
       ansible.builtin.debug:
-        msg: "{{ check_output }}"
+        msg: "{{ check_output.stdout }}"
     - name: Start And Enable nginx
       ansible.builtin.service:
         name: nginx
         state: started
         enabled: true
-  handler:
+  handlers:
     - name: Restart Nginx
       ansible.builtin.service:
         name: nginx
