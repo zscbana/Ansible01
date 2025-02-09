@@ -1,0 +1,5 @@
+- name: Nginx web server For allowed ips
+  hosts: my_hosts
+  become: true
+  roles:
+    - nginx-deployment-role

@@ -1,0 +1,28 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for roles/nginx-deployment-role
+- name: install nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+    update_cache: yes
+- name: Place the Nginx configuration
+  ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/sites-available/default
+    mode: '0644'
+    owner: root
+    group: root
+  notify: Restart Nginx
+- name: Check Nginx Configuration
+  ansible.builtin.command:
+    cmd: nginx -t
+  register: check_output
+- name: print check output
+  ansible.builtin.debug:
+    msg: "{{ check_output.stdout }}"
+- name: Start And Enable nginx
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true
