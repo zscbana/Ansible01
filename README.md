@@ -40,7 +40,7 @@ Ansible01/
 - Implemented the same **Nginx setup** but structured it using **Ansible roles**.
 - Created a reusable **Ansible role** for automated Nginx configuration.
 - Improved maintainability and **scalability** of the deployment.
-- [📄 Read More](./assignment02/README.md)
+- [📄 Read More](https://github.com/zscbana/Ansible01/tree/main/Assignment02)
 
 ## Requirements
 - **Multipass** installed and configured.
