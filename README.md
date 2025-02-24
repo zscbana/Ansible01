@@ -34,7 +34,7 @@ Ansible01/
 - Created a new **virtual machine** using **Multipass**.
 - Configured an **Ansible playbook** to install and configure **Nginx**.
 - Restricted access to specific **IP addresses** using **Jinja2 templates**.
-- [📄 Read More](./assignment01/README.md)
+- [📄 Read More](https://github.com/zscbana/Ansible01/tree/main/Assignment01)
 
 ### 📌 Assignment 2: Nginx Setup with Ansible Roles
 - Implemented the same **Nginx setup** but structured it using **Ansible roles**.
